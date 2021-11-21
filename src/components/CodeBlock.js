@@ -1,4 +1,4 @@
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula, monoBlue, paraisoLight, pojoaque } from "react-code-blocks";
 
 function CodeBlockCo({ text, language, showLineNumbers }) {
     return (
@@ -6,7 +6,7 @@ function CodeBlockCo({ text, language, showLineNumbers }) {
         text={text}
         language={language}
         showLineNumbers={showLineNumbers}
-        theme={dracula}
+        theme={pojoaque}
         wrapLines
       />
     );
