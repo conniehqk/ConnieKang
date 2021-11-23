@@ -3,6 +3,7 @@ import { Menu, Container } from 'semantic-ui-react'
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
 import About from './Aboutme';
+import Contact from './Contact';
 
 function App() {
   const [activeItem,setActiveItem] = useState('home')
@@ -27,12 +28,13 @@ function App() {
                 onClick={handleItemClick}
               />
               <Menu.Item
-                name='blog'
-                active={activeItem === 'blog'}
+                name='resume'
+                active={activeItem === 'resume'}
                 onClick={handleItemClick}
               />
               <Menu.Item
                 name='contact'
+                as={Link} to='/contact'
                 active={activeItem === 'contact'}
                 onClick={handleItemClick}
               />
@@ -42,6 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </div>
   );

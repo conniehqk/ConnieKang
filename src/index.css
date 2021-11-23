@@ -17,3 +17,25 @@
 #homepage {
   padding-top: 6rem;
 }
+
+#aboutme {
+  padding-top: 5rem;
+}
+
+#contact {
+  padding-top: 5rem;
+}
+
+#contactform {
+  display:flex;
+	justify-content: center;
+  padding-top: 2rem;
+}
+
+#contacttext {
+  text-align: center;
+}
+
+#contactform .form {
+  width: 80%;
+}

@@ -1,7 +1,7 @@
 export default {
     Python: `
     
-    # If I am a class instance...
+    # If I was a class instance...
 
     class SoftwareEngineer(DataAnalyst):
     
@@ -51,7 +51,7 @@ export default {
     `,
     JavaScript: `
     
-    // If I am a class instance...
+    // If I was a class instance...
 
     class SoftwareEngineer extends DataAnalyst {
 
