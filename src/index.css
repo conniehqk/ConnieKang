@@ -19,23 +19,61 @@
 }
 
 #aboutme {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 #contact {
-  padding-top: 5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #contactform {
   display:flex;
-	justify-content: center;
+	justify-content: left;
   padding-top: 2rem;
 }
 
 #contacttext {
+  display:flex;
+	justify-content: right;
   text-align: center;
 }
 
 #contactform .form {
-  width: 80%;
+  width: 95%;
+}
+
+#contactform .form input{
+  border: 1px solid black;
+}
+
+#contactform .form textarea {
+  border: 1px solid black;
+}
+
+#contactform .form button{
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
+
+#doodle {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+#doodle img{
+  width: 95%;
+}
+
+#aboutpic {
+  margin-top: 2rem;
+  height: 25rem;
+  background-image: url("./components/konrad-weber-L1n9zASYDUs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
 }
