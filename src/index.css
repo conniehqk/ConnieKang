@@ -19,7 +19,15 @@
 }
 
 #aboutme {
-  padding-top: 3rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#aboutme p span {
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 #contact {
@@ -69,11 +77,16 @@
   width: 95%;
 }
 
-#aboutpic {
+#aboutmepic img {
+  max-width: 20rem;
+  margin-left: -2rem;
   margin-top: 2rem;
-  height: 25rem;
-  background-image: url("./components/konrad-weber-L1n9zASYDUs-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
+  height: 28rem;
+}
+
+
+#aboutmepic p {
+  margin-top: 2rem;
+  margin-right: -3rem;
+  padding-left: 22rem;
 }

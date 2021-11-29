@@ -24,7 +24,9 @@ function Contact() {
                     
                 </Grid.Column>
                 <Grid.Column id="contactform">
+                    
                     <Form size="big">
+                    <h2>Let's chat!</h2>
                         <Form.Input 
                             fluid
                             label='Name' 
