@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
 
 #body {
   background: #dcfced;
@@ -7,6 +8,12 @@
 #menu {
   border:none;
   padding-top: 2rem;
+}
+
+#menu a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 #brand {
@@ -19,22 +26,21 @@
 }
 
 #aboutme {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 6rem;
+}
+
+#aboutme p {
+  font-size: 17px;
+  font-family: 'Rokkitt', serif;
 }
 
 #aboutme p span {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
 #contact {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 6rem;
 }
 
 #contactform {
@@ -79,14 +85,14 @@
 
 #aboutmepic img {
   max-width: 20rem;
-  margin-left: -2rem;
-  margin-top: 2rem;
+  margin-right: 2rem;
   height: 28rem;
 }
 
-
 #aboutmepic p {
+  margin-top: 1rem;
+}
+
+#aboutmepic {
   margin-top: 2rem;
-  margin-right: -3rem;
-  padding-left: 22rem;
 }

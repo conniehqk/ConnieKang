@@ -5,7 +5,7 @@ function Contact() {
         <Container id="contact">
             <Grid stackable columns={2}>
                 <Grid.Column id="doodle">
-                    <img src="https://doodleipsum.com/700?i=91f7a6c433fd73c95da86b8ffb8b7b02" alt="Emails by Irene Falgueras" />
+                    <img className="animate__animated animate__fadeIn" src="https://doodleipsum.com/700?i=91f7a6c433fd73c95da86b8ffb8b7b02" alt="Emails by Irene Falgueras" />
                     <p>Say hi to me on these social networks:</p>
                     <span>
                         <a href="https://github.com/conniehqk">

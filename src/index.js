@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import 'semantic-ui-css/semantic.min.css'
+import 'animate.css';
 import App from './components/App';
 
 ReactDOM.render(
