@@ -96,3 +96,16 @@
 #aboutmepic {
   margin-top: 2rem;
 }
+
+#project {
+  padding-top: 6rem;
+}
+
+#blog {
+  padding-top: 6rem;
+}
+
+#blog .accordion {
+  border: none;
+  padding-top: 1.2rem;
+}

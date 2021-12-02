@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './Aboutme';
 import Contact from './Contact';
 import Project from './Project';
+import Blog from './Blog';
 
 function App() {
   const [activeItem,setActiveItem] = useState('home')
@@ -30,6 +31,12 @@ function App() {
                 onClick={handleItemClick}
               />
               <Menu.Item
+                name='blog'
+                as={Link} to='/blog'
+                active={activeItem === 'blog'}
+                onClick={handleItemClick}
+              />
+              <Menu.Item
                 name='resume'
                 active={activeItem === 'resume'}
                 onClick={handleItemClick}
@@ -46,6 +53,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/project" element={<Project />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
