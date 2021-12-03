@@ -133,3 +133,16 @@
   font-family: 'Russo One', sans-serif;
   font-size: 30px;
 }
+
+#resume {
+  padding-top: 6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+#resume iframe {
+  width: 90%;
+  height: 600px;
+}

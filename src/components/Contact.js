@@ -1,6 +1,40 @@
+import { useState } from 'react'
 import { Container, Button, Checkbox, Form, TextArea, Grid, Icon } from 'semantic-ui-react'
+import { send, init } from 'emailjs-com';
 
 function Contact() {
+    const [formMessage, setFormMessage] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+    const [endorsement, setEndorsement] = useState(false)
+    function handleChange(e) {
+        setFormMessage({
+            ...formMessage, [e.target.name]:e.target.value
+        })
+    }
+    const userID = init('user_NACkm4Te0UR15Mzzi2NOS');
+    function handleSubmit(e) {
+        e.preventDefault()
+        const templateParams = {
+            from_name: `${formMessage.name}`,
+            from_email: `${formMessage.email}`,
+            message: formMessage.message,
+            endorsement: endorsement? "liked the website":"didn't like the website"
+        }
+        send(
+            'service_44cpah8',
+			'template_2c9kkfq',
+			templateParams,
+			userID
+        ).then(r=>{console.log(r.text)},(error)=>{
+            console.log(error.text)
+            alert('Something went wrong, please try again.')
+        })
+        e.target.reset()
+    }
+
     return (
         <Container id="contact">
             <Grid stackable columns={2}>
@@ -25,30 +59,36 @@ function Contact() {
                 </Grid.Column>
                 <Grid.Column id="contactform">
                     
-                    <Form size="big">
-                    <h2>Let's chat!</h2>
+                    <Form onSubmit={handleSubmit} size="big">
+                        <h2>Let's chat!</h2>
                         <Form.Input 
                             fluid
+                            name='name' 
                             label='Name' 
                             type='text' 
                             placeholder='Joe'
+                            onChange={handleChange}
                             required 
                         />
                         <Form.Input 
                             fluid
+                            name='email'
                             label='Email' 
                             type='email' 
                             placeholder='joe@mail.com' 
+                            onChange={handleChange}
                             required 
                         />
                         <Form.Field
                             control={TextArea}
+                            name="message"
                             label='Message'
                             placeholder='Message'
+                            onChange={handleChange}
                             required
                         />
                         <Form.Field>
-                        <Checkbox label='Do you like my website?' />
+                        <Checkbox onChange={()=>{setEndorsement(!endorsement)}} label='Do you like my website?' />
                         </Form.Field>
                         <Button type='submit'>Submit</Button>
                     </Form>
