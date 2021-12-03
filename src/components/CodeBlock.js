@@ -1,4 +1,4 @@
-import { CopyBlock, dracula, monoBlue, paraisoLight, pojoaque } from "react-code-blocks";
+import { CopyBlock, pojoaque } from "react-code-blocks";
 
 function CodeBlockCo({ text, language, showLineNumbers }) {
     return (

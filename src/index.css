@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 #body {
   background: #dcfced;
@@ -107,5 +108,28 @@
 
 #blog .accordion {
   border: none;
-  padding-top: 1.2rem;
+  padding-top: 1.5rem;
+}
+
+#blogcontent {
+  padding: 1rem;
+  padding-left: 2rem;
+  font-family: 'Rokkitt', serif;
+  font-size: larger;
+}
+
+#blogcontent img{
+  max-width:100% !important;
+}
+
+#blogarticle .title {
+  text-align: center;
+}
+
+#blogarticle h1 {
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=dcd1eb);
+        margin: -2px -6px;
+        padding:  2px  6px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 30px;
 }

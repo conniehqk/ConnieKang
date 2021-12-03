@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Accordion, Button, Container } from "semantic-ui-react"
+import { Accordion, Button, Container, Loader } from "semantic-ui-react"
 import parse from 'html-react-parser';
 
 function Blog() {
@@ -15,26 +15,31 @@ function Blog() {
     }
     return (
         <Container id="blog" text>
-            
-                {blogs.map((blog,index)=>{
+                
+            {
+                blogs?
+                blogs.map((blog,index)=>{
                     return (
-                    <Accordion key={index} fluid>
+                    <Accordion id="blogarticle" key={index} fluid>
                         <Accordion.Title
                             active={activeIndex === index}
                             index={index}
                             onClick={handleClick}
                         >
                             <h1>{blog.title}</h1>
-                            <p>{blog.pubDate.slice(0,11)}</p>
+                            <p>Published: {blog.pubDate.slice(0,11)}</p>
                         </Accordion.Title>
                         <Accordion.Content active={activeIndex === index}>
-                            <div>
-                                <p>{parse(blog.description.slice(0,290))}...</p>
-                                <Button href={blog.link}>View on Medium</Button>
+                            <div id="blogcontent">
+                                {parse(blog.description)}
+                                <Button floated='right' href={blog.link}>View on Medium</Button>
                             </div>
                         </Accordion.Content>
                     </Accordion>
-                )})}
+                )})
+                :
+                <Loader>Loading</Loader>
+            }
             
         </Container>
     )
