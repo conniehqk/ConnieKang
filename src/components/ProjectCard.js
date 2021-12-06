@@ -1,4 +1,4 @@
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Button, Image, Modal, Icon } from 'semantic-ui-react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -32,6 +32,7 @@ function ProjectCard({ project, open, handleClick }) {
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
+                <a href={project.github}><Icon size="big" name="github"></Icon></a>
                 <Button color='black' onClick={() => handleClick(-1)}>
                 Close
                 </Button>
