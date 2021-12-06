@@ -146,3 +146,15 @@
   width: 90%;
   height: 600px;
 }
+
+.ui .message {
+  text-align: center;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 3px !important;
+}
+
+#projectcard {
+  margin: 1rem;
+}

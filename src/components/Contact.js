@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container, Button, Checkbox, Form, TextArea, Grid, Icon } from 'semantic-ui-react'
+import { Container, Button, Checkbox, Form, TextArea, Grid, Icon, Message } from 'semantic-ui-react'
 import { send, init } from 'emailjs-com';
 
 function Contact() {
@@ -9,6 +9,7 @@ function Contact() {
         message: "",
     })
     const [endorsement, setEndorsement] = useState(false)
+    const [success, setSuccess] = useState(false)
     function handleChange(e) {
         setFormMessage({
             ...formMessage, [e.target.name]:e.target.value
@@ -28,7 +29,10 @@ function Contact() {
 			'template_2c9kkfq',
 			templateParams,
 			userID
-        ).then(r=>{console.log(r.text)},(error)=>{
+        ).then(r=>{
+            console.log(r.text)
+            setSuccess(true)
+        },(error)=>{
             console.log(error.text)
             alert('Something went wrong, please try again.')
         })
@@ -37,6 +41,8 @@ function Contact() {
 
     return (
         <Container id="contact">
+            {success?
+            <Message positive><Message.Header>I got your message, thank you!</Message.Header></Message>:null}
             <Grid stackable columns={2}>
                 <Grid.Column id="doodle">
                     <img className="animate__animated animate__fadeIn" src="https://doodleipsum.com/700?i=91f7a6c433fd73c95da86b8ffb8b7b02" alt="Emails by Irene Falgueras" />
