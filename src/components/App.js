@@ -7,6 +7,7 @@ import Contact from './Contact';
 import Project from './Project';
 import Blog from './Blog';
 import Resume from './Resume';
+import ParticlesBg from 'particles-bg'
 
 function App() {
   const [activeItem,setActiveItem] = useState('home')
@@ -60,6 +61,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
+      <ParticlesBg type="circle" bg={true} />
     </div>
   );
 }
