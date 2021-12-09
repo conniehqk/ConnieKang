@@ -61,7 +61,12 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-      <ParticlesBg type="circle" bg={true} />
+      <ParticlesBg type="circle" className="bubbles" bg={{
+        position: "fixed",
+        zIndex: -1,
+        top: 0,
+        left: 0
+      }}/>
     </div>
   );
 }

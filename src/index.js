@@ -6,9 +6,11 @@ import 'semantic-ui-css/semantic.min.css'
 import 'animate.css';
 import App from './components/App';
 
+
 ReactDOM.render(
   <BrowserRouter>
     <App />
+    
   </BrowserRouter>,
   document.getElementById('root')
 );
