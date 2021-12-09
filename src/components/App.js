@@ -8,6 +8,7 @@ import Project from './Project';
 import Blog from './Blog';
 import Resume from './Resume';
 import ParticlesBg from 'particles-bg'
+import MouseParticles from 'react-mouse-particles'
 
 function App() {
   const [activeItem,setActiveItem] = useState('home')
@@ -67,6 +68,7 @@ function App() {
         top: 0,
         left: 0
       }}/>
+      <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );
 }
