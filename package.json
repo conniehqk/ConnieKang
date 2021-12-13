@@ -2,6 +2,11 @@
   "name": "connie-personal-site",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "8.1.0",
+    "node": "16.13.0"
+
+  },
   "dependencies": {
     "@react-pdf/renderer": "^2.0.21",
     "@testing-library/jest-dom": "^5.15.0",
@@ -25,7 +30,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
