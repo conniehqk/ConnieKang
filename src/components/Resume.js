@@ -1,6 +1,6 @@
 import { Container } from 'semantic-ui-react'
 import { Document } from 'react-pdf'
-import resume from "./Resume - Haiqing Kang (SDE).pdf"
+import resume from "./Haiqing (Connie) Kang Resume.pdf"
 
 function Resume() {
     return (

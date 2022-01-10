@@ -33,6 +33,10 @@ function ProjectCard({ project, open, handleClick }) {
             </Modal.Content>
             <Modal.Actions>
                 <a href={project.github}><Icon size="big" name="github"></Icon></a>
+                {project.live?<Button color='black'>
+                <a href={project.live} target="_blank">Live</a>
+                </Button>:null}
+                
                 <Button color='black' onClick={() => handleClick(-1)}>
                 Close
                 </Button>
